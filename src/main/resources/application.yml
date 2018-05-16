@@ -6,6 +6,18 @@ spring:
       username: root
       password: example
       database: admin
+
+---
+
+spring:
+  profiles: heroku
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      username: ${MONGO_USERNAME}
+      password: ${MONGO_PASSWORD}
+      database: ${MONGO_DATABASE}
 #
 
 #mongodb+srv://admin:<PASSWORD>@cluster0-2ugl8.mongodb.net/test
